@@ -101,8 +101,8 @@ lece_env <- bind_cols(select(fish, 10), select(env, c(3, 4, 5, 6, 8, 10, 11)))
 lece_env
 corr_lece <- cor(lece_env)
 print(corr_lece)
-
-corrplot(corr_lece, method = "circle")# 可视化环境变量之间的相关性
+# 可视化环境变量之间的相关性
+corrplot(corr_lece, method = "circle")
 
 #鱼类lece与环境因子之间的线性关系
 lece_model <- lm(lece_env$Lece ~ ., data = lece_env)
